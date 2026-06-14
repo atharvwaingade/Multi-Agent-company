@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  crewpit:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - PORT=8000
+      - SANDBOX_MODE=subprocess
+    volumes:
+      # Persist generated output and memory across restarts
+      - ./output:/home/crewpit/app/output
+      - ./memory:/home/crewpit/app/memory
+      - ./data:/home/crewpit/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python3", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

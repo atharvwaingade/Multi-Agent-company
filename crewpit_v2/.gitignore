@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets — NEVER commit
+.env
+*.env
+
+# Generated output (large, ephemeral)
+output/
+
+# Memory / vector index (large binary)
+memory/vector.index
+memory/vector_data.pkl
+
+# Logs
+data/logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dev data — never commit run logs or generated outputs
+data/logs/run_logs.json
+data/runs/
+memory/vector.index
+memory/vector_data.pkl
+output/
+outputs/

@@ -1,0 +1,26 @@
+# ── Crewpit requirements ───────────────────────────────────────────────────────
+#
+# Install core deps:
+#     pip install -r requirements.txt
+#
+# Vector memory (optional — pipeline works without these):
+#     pip install crewpit[vector]
+#   or manually:
+#     pip install sentence-transformers faiss-cpu numpy
+#
+# Offline fallback:
+#     Install Ollama from https://ollama.com then: ollama pull mistral
+
+# ── Web UI server ──────────────────────────────────────────────────────────────
+fastapi>=0.111.0,<1.0.0
+uvicorn[standard]>=0.29.0,<1.0.0
+pydantic>=2.0.0,<3.0.0
+
+# ── Environment / config ───────────────────────────────────────────────────────
+python-dotenv>=1.0.0,<2.0.0
+
+# ── Optional: better RAM detection in setup.py ─────────────────────────────────
+psutil>=5.9.0,<7.0.0
+
+# NOTE: sentence-transformers, faiss-cpu, and numpy are intentionally NOT listed
+# here — they are heavy optional deps. Install with: pip install crewpit[vector]
