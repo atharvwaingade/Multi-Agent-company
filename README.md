@@ -2,7 +2,7 @@
 
 This repository now contains the extracted **Crewpit v2** project under:
 
-- `/home/runner/work/Multi-Agent-company/Multi-Agent-company/atharvwaingade/Multi-Agent-company/crewpit_v2`
+- `./crewpit_v2/`
 
 ## What this project is
 

@@ -15,7 +15,7 @@ from models.llm import check_groq, _is_api_key_set, GROQ_API_KEY, MODEL_MAP
 
 print("\n[1] Groq API Key")
 if _is_api_key_set():
-    print(f"    ✅ Key found: {GROQ_API_KEY[:8]}...{GROQ_API_KEY[-4:]}")
+    print("    ✅ Key found: set in environment")
     print("    Testing connection...")
     ok, msg = check_groq()
     print(f"    {'✅' if ok else '❌'} {msg}")
